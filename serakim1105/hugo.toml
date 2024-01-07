@@ -1,0 +1,57 @@
+baseURL = 'https://serakim1105.github.io'
+languageCode = 'en-us'
+title = 'Sera Kim'
+theme = "hugo-coder"
+defaultContentLanguage = "en"
+paginate = 4
+
+[markup.highlight]
+noClasses = false
+
+[params]
+author = "Sera Kim"
+# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+description = "Sera Kim's personal website"
+keywords = "blog,developer,personal"
+info = ["Software Engineer"]
+avatarURL = "https://raw.githubusercontent.com/serakim1105/serakim1105.github.io/main/Profile_photo.png"
+rtl = false
+colorScheme = "auto"
+hideColorSchemeToggle = false
+maxSeeAlsoItems = 5
+
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
+
+[[params.social]]
+name = "Github"
+icon = "fa fa-2x fa-github"
+weight = 1
+url = "https://github.com/serakim1105"
+
+[[params.social]]
+name = "LinkedIn"
+icon = "fa fa-2x fa-linkedin"
+weight = 4
+url = "https://www.linkedin.com/in/sera-kim-47661ab5/"
+
+[languages.en]
+languageName = ":us:"
+
+[[languages.en.menu.main]]
+name = "About"
+weight = 1
+url = "about/"
+
+[[languages.en.menu.main]]
+name = "Projects"
+weight = 3
+url = "projects/"
+
+[[languages.en.menu.main]]
+name = "Contact"
+weight = 5
+url = "contact/"

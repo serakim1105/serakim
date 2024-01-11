@@ -5,4 +5,6 @@ slug = "about"
 
 Hello, I am Sera. 
 
-![alt text](https://github.com/[serakim1105]/[serakim1105.github.io]/blob/[main]/Profile_photo.png?raw=true)
+![Screenshot](https://github.com/[serakim1105]/[serakim1105.github.io]/blob/[main]/Profile_photo.png?raw=true)
+
+![Screenshot](Profile_photo.png)

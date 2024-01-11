@@ -1,40 +1,62 @@
-{{ if .Site.Data.homepage.about.enable }}
-<section class="section rad-animation-group pb-0" id="about">
-  <div class="container rad-fade-down">
-    <div class="row d-flex flex-column-reverse flex-md-row">
-      <div class="about__profile-picture col-12 col-md-6">
-        {{ $img := resources.Get .Site.Data.homepage.about.image.x }}
-        {{ $img2x := resources.Get .Site.Data.homepage.about.image._2x }}      
-        {{ $imgWebp := $img.Resize (printf "%dx%d webp" $img.Height $img.Width) }}
-        {{ $img2xWebp := $img.Resize (printf "%dx%d webp" $img2x.Height $img2x.Width) }}
-        <picture>
-          <source srcset="{{ $imgWebp.RelPermalink }} 1x, {{ $img2xWebp.RelPermalink }} 2x" type="image/webp" />
-          <source srcset="{{ $img.RelPermalink }} 1x, {{ $img2x.RelPermalink }} 2x" type="image/webp">
-          <img
-            width="{{ $img.Width }}"
-            height="{{ $img.Height }}"
-            class="lozad img-responsive image-left-overflow"
-            src="data:image/gif;base64,R0lGODlhBwACAIAAAP///wAAACH5BAEAAAEALAAAAAAHAAIAAAIDjI9YADs="
-            srcset="{{ $img.RelPermalink }} 1x, {{ $img2x.RelPermalink }} 2x"
-            data-src="{{ $img.RelPermalink }}"
-            data-srcset="{{ $img.RelPermalink }} 1x, {{ $img2x.RelPermalink }} 2x"
-            alt="Profile Picture of Adrián Moreno (@zetxek), working side by side with a colleague: sitting on a desk, while looking at a screen"
-          />
-        </picture>
-      </div>
-      <div class="col-12 col-md-6 my-auto my-auto">
-        <h2>{{ .Site.Data.homepage.about.title }}</h2>
-        {{ .Site.Data.homepage.about.content | safeHTML }}
-        <a
-          href="{{ .Site.Data.homepage.about.button.URL | absURL }}"
-          target="_blank"
-          class="btn btn-primary"
-        >
-          <i class="{{ .Site.Data.homepage.about.button.icon }}"></i>
-          {{ .Site.Data.homepage.about.button.btnText }}
-        </a>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+        }
+
+        .about-image {
+            flex: 1;
+            max-width: 300px;
+            margin-right: 20px;
+        }
+
+        .about-text {
+            flex: 2;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>About Me</h1>
+    
+    <div class="about-section">
+        <div class="about-image">
+            <img src="https://raw.githubusercontent.com/serakim1105/serakim1105.github.io/main/Profile_photo.png" alt="Profile Image">
+        </div>
+        <div class="about-text">
+            <p>Hello, I'm [Your Name]. Welcome to my About Me page!</p>
+            <p>I am passionate about [your interests or profession]. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam non justo id arcu feugiat bibendum. Vestibulum in luctus libero. Quisque vel aliquet enim.</p>
+            <p>Feel free to [contact me / explore my work / add more content].</p>
+        </div>
     </div>
-  </div>
-</section>
-{{ end }}
+
+</div>
+
+</body>
+</html>

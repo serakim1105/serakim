@@ -1,6 +1,6 @@
 +++
-title = "About"
+title = "Who Am I?"
 slug = "about"
 +++
 
-Herro
+Hello, I am Sera. 

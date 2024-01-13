@@ -51,26 +51,13 @@ slug = "projects"
             cursor: pointer;
         }
 
-        .project img[src*="Shopping_cart"] {
-            width: 100%;
-            max-width: 600px; /* Adjust the maximum width as needed */
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
-        .project img[src*="Maze"] {
-            width: 100%;
-            max-width: 600px; /* Adjust the maximum width as needed */
-            height: auto;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            cursor: pointer;
-        }
-
         .project img:hover {
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .project img[src*="Shopping_cart"],
+        .project img[src*="Maze"] {
+        max-width: 400px; /* Adjust the maximum width as needed for specific images */
         }
 
         .project-header {

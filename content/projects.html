@@ -33,12 +33,18 @@ slug = "projects"
         }
 
         .project {
+            display: flex; /* Use flexbox to create a horizontal layout */
             margin-bottom: 20px;
         }
 
+        .project-details {
+            flex-grow: 1; /* Allow the details to grow and take available space */
+            margin-right: 20px; /* Adjust margin as needed */
+        }
+
         .project img {
-            width: 100%; /* Make the image fill its container */
-            max-width: 400px; /* Set a maximum width to limit the size */
+            width: 100%;
+            max-width: 400px;
             height: auto;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -68,19 +74,21 @@ slug = "projects"
         <h2>Personal Projects</h2>
         
         <div class="project">
-            <h3 class="project-header">Cart API</h3>
+            <div class="project-details">
+                <h3 class="project-header">Cart API</h3>
+                <p class="project-description">A RESTful API for managing shopping carts and order processing.</p>
+            </div>
             <a href="https://github.com/serakim1105/cart-api" target="_blank">
                 <img src="https://raw.githubusercontent.com/serakim1105/serakim1105.github.io/main/API_photo.png" alt="cart-api">
             </a>
-            <p class="project-description">A RESTful API for managing shopping carts and order processing.</p>
         </div>
+
+        <!-- Add more Personal Projects here -->
 
         <div class="project-section">
             <h2>School Projects</h2>
             <!-- Add School Projects here -->
         </div>
-    
-        <!-- Add more Personal Projects here -->
     </div>
 
 </div>
